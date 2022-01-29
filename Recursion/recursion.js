@@ -1,6 +1,5 @@
 "use strict";
 
-/* Write a function to do the division operation without using the built-in division*/
 function division(x, y) {
   if (y == 0) return 0;
   else if (x - y == 0) return 1;

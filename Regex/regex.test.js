@@ -27,7 +27,9 @@ let arr = [];
 function imagesSearcher(text) {
   let regex = /\w*.png\b|\w*.jpeg\b|\w*.jpg\b/g;
   arr = text.match(regex);
-  return arr;
+  if (arr == null) {
+    return [];
+  } else return arr;
 }
 
 describe("Test capitalA", () => {
@@ -60,11 +62,11 @@ describe("Test imagesSearcher", () => {
       imagesSearcher(
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       )
-    ).toStrictEqual(null);
+    ).toStrictEqual([]);
     expect(
       imagesSearcher(
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. horse.gif Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore dolphin.pdf eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa mouse.tiff qui officia deserunt mollit anim id est laborum."
       )
-    ).toStrictEqual(null);
+    ).toStrictEqual([]);
   });
 });

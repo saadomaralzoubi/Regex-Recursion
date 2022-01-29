@@ -1,3 +1,5 @@
+"use strict";
+
 describe("Test division", () => {
   test("Return the division result", () => {
     expect(division(10, 2)).toStrictEqual(5);

@@ -23,13 +23,12 @@ function ioEmail(email) {
 find all images in that text and return their names and extention in an array 
 required extention are jpg, jpeg and png.
 */
-
+let arr = [];
 function imagesSearcher(text) {
   let regex = /\w*.png\b|\w*.jpeg\b|\w*.jpg\b/g;
   arr = text.match(regex);
   return arr;
 }
-let arr = [];
 
 describe("Test capitalA", () => {
   test("It should return true if the input has uppercase and lowercase characters (no numbers and symbols) and it should end with capital A else return false ", () => {

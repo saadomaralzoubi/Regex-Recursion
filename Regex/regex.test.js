@@ -25,12 +25,10 @@ required extention are jpg, jpeg and png.
 */
 
 function imagesSearcher(text) {
-  function imagesSearcher(text) {
-    let arr = [];
-    let regex = /\w*.png\b|\w*.jpeg\b|\w*.jpg\b/g;
-    arr = text.match(regex);
-    return arr;
-  }
+  let arr = [];
+  let regex = /\w*.png\b|\w*.jpeg\b|\w*.jpg\b/g;
+  arr = text.match(regex);
+  return arr;
 }
 
 describe("Test capitalA", () => {

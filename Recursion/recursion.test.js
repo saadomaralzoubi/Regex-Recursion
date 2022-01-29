@@ -2,6 +2,7 @@
 function division(x, y) {
   if (y == 0) return 0;
   else if (x - y == 0) return 1;
+  else if (x < y) return 0;
   else return 1 + division(x - y, y);
 }
 

@@ -10,10 +10,10 @@ Example:
 pow(2,4) = 16
 */
 
-function pow(x, n) {
+function pow(n, x) {
   if (n == 0) return 1;
   else if (n && x == 0) return 1;
-  else return x * pow(x, n - 1);
+  else return n * pow(n, x - 1);
 }
 /* The Fibonacci Series is a numeric series starting with the integers 0 and 1. In this series,
 the next integer is determined by summing the previous two. This gives us:

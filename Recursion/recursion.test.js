@@ -2,7 +2,7 @@
 function division(x, y) {
   if (y == 0) return 0;
   else if (x == y) return 1;
-  else return 1 + division(x - y, x);
+  else return 1 + division(x - y, y);
 }
 
 /* Write a function that implement Math.pow(x,n) but using recursion

@@ -3,7 +3,7 @@
 /* Write a function to do the division operation without using the built-in division*/
 
 function division(x, y) {
-  if (x == 0) return 0;
+  if (y == 0) return 0;
   else if (x == y) return 1;
   else return 1 + division(x - y, y);
 }

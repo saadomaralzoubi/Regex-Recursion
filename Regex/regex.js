@@ -26,8 +26,8 @@ required extention are jpg, jpeg and png.
 */
 
 function imagesSearcher(text) {
-  let arr = [];
+  let result;
   let regex = /\w*.png\b|\w*.jpeg\b|\w*.jpg\b/g;
-  arr = text.match(regex);
-  return arr;
+  result = text.match(regex);
+  return result;
 }

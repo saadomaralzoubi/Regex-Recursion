@@ -25,11 +25,11 @@ required extention are jpg, jpeg and png.
 */
 
 function imagesSearcher(text) {
-  let arr = [];
   let regex = /\w*.png\b|\w*.jpeg\b|\w*.jpg\b/g;
   arr = text.match(regex);
   return arr;
 }
+let arr = [];
 
 describe("Test capitalA", () => {
   test("It should return true if the input has uppercase and lowercase characters (no numbers and symbols) and it should end with capital A else return false ", () => {

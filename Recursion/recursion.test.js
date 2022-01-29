@@ -1,8 +1,8 @@
 /* Write a function to do the division operation without using the built-in division*/
-function division(number, dividedBy) {
-  if (dividedBy == 0) return 0;
-  else if (number == dividedBy) return 1;
-  else return 1 + division(number - dividedBy, dividedBy);
+function division(x, y) {
+  if (y == 0) return 0;
+  else if (x == y) return 1;
+  else return 1 + division(x - y, x);
 }
 
 /* Write a function that implement Math.pow(x,n) but using recursion

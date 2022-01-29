@@ -2,10 +2,10 @@
 
 /* Write a function to do the division operation without using the built-in division*/
 
-function division(number, dividedBy) {
-  if (dividedBy == 0) return 0;
-  else if (number == dividedBy) return 1;
-  else return 1 + division(number - dividedBy, dividedBy);
+function division(x, y) {
+  if (x == 0) return 0;
+  else if (x == y) return 1;
+  else return 1 + division(x - y, y);
 }
 
 /* Write a function that implement Math.pow(x,n) but using recursion
@@ -13,10 +13,10 @@ Example:
 pow(2,4) = 16
 */
 
-function pow(x, n) {
-  if (n == 0) return 1;
+function pow(n, x) {
+  if (x == 0) return 1;
   else if (n && x == 0) return 1;
-  else return x * pow(x, n - 1);
+  else return n * pow(n, x - 1);
 }
 
 /* The Fibonacci Series is a numeric series starting with the integers 0 and 1. In this series,

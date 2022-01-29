@@ -4,6 +4,7 @@
 characters (no numbers and symbols) and it should end with capital A else return false */
 
 function capitalA(s) {
+  let result;
   let regex = /[A-Za-z]*?[A$]/;
   result = regex.test(s);
   return result;
@@ -13,6 +14,7 @@ function capitalA(s) {
 which end with io (example@example.io) */
 
 function ioEmail(email) {
+  let result;
   let regex = /^[a-zA-Z0-9]+@example+.io$/;
   result = regex.test(email);
   return result;
@@ -24,7 +26,8 @@ required extention are jpg, jpeg and png.
 */
 
 function imagesSearcher(text) {
-  regex = /\w*.png\b|\w*.jpeg\b|\w*.jpg\b/g;
+  let arr;
+  let regex = /\w*.png\b|\w*.jpeg\b|\w*.jpg\b/g;
   arr = text.match(regex);
   return arr;
 }
